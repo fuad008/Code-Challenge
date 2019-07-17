@@ -16,5 +16,5 @@
 - npm install --save eslint@^5
 
 ## Third Step - Add Components
-- Then Download and Copy the 'components' folder into the main Project found on this link: https://github.com/fuad008/Code-Challenge under 'App' folder.
-- More instruction will be added.
+- Download and copy the 'components' folder into the main Project found on this link: https://github.com/fuad008/Code-Challenge under 'App' folder.
+- Download and replace the 'App.js' file in your project.
