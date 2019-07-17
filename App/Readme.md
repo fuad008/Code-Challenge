@@ -18,3 +18,6 @@
 ## Third Step - Add Components
 - Download and copy the 'components' folder into the main Project found on this link: https://github.com/fuad008/Code-Challenge under 'App' folder.
 - Download and replace the 'App.js' file in your project.
+
+## Note
+- Since there is 100MB file size limit on GitHub, I only uploaded the necessary files such as 'components' folder and 'App.js' file. Rest of the files are same for everybody if you follow the above steps. 
