@@ -2,10 +2,14 @@ import React, {Component} from 'react';
 import { SafeAreaView, StyleSheet, TouchableOpacity, Image, ImageBackground, View, Text, Platform, Button, StatusBar} from 'react-native';
 
 export default class HomeScreen extends Component {
+
+    static navigationOptions ={
+      title: 'Home',
+    }
     
     render(){
       return (
-        <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+        <View style={{flex: 1, backgroundColor: '#fff'}}>
           <View style={styles.container}>
               <View style={{height: '20%'}}>
                 <ImageBackground source={require("../assets/weatherHeader.png")} style={{ width: '100%', height: '100%' }}>
@@ -15,7 +19,7 @@ export default class HomeScreen extends Component {
                       <Text style={{color: 'black', fontSize: 13}}>Today is 75° and Sunny</Text>
                     </View>
                     <View style={{width: '30%'}}>
-                      <TouchableOpacity onPress={()=> { const {navigate} = this.props.navigation; return navigate("Search")}}>
+                      <TouchableOpacity onPress={()=>  this.props.navigation.navigate("Search") }>
                         <Image source={require("../assets/addBookmarkButton.png")}></Image>
                       </TouchableOpacity>
                     </View>
@@ -27,7 +31,7 @@ export default class HomeScreen extends Component {
                 <Text style={{color: 'grey', fontSize: 15, marginTop: 5}}>Click the blue button to add</Text>
               </View>
               <View style={{flex:1, height: '100%'}}>
-                <ImageBackground source={require("../assets/tripBackground.png")} style={{ width: '100%', height: '100%', opacity: 0.8, backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                <ImageBackground source={require("../assets/tripBackground.png")} style={{ width: '100%', height: '100%', opacity: 0.8, borderTopWidth: 0 , backgroundColor: 'rgba(0,0,0,0.5)' }}>
                   <View style={{ flex: 1, justifyContent: 'flex-end', marginBottom: 40, padding: 15 }}>
                     <Text style={{color: 'white', fontSize: 25, fontWeight: 'bold', }}>Exploring Louisville BBQ</Text>
                     <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>Louisville, Kentucky</Text>
@@ -35,7 +39,7 @@ export default class HomeScreen extends Component {
                 </ImageBackground>
               </View>
             </View>
-        </SafeAreaView>
+        </View>
       );
     }
 };
