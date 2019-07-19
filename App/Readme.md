@@ -5,6 +5,7 @@
 - I am not using Expo Cli, So follow the "React Native CLI Quickstart" getting started guide using React Native (0.60) found at this link: https://facebook.github.io/react-native/docs/getting-started
 - I am using React Navigation 3.x for navigation, so follow the getting started guide found at this website: https://reactnavigation.org/docs/en/getting-started.html
 - For the Google Place Api, I am using the react-native-google-places. Note: this api requires an active billing account. For gettting started with this package follow this link: https://github.com/tolu360/react-native-google-places
+- I used react-native-dotenv for environment variables. Here is the link to setup: https://www.npmjs.com/package/react-native-dotenv
 - Copy the "assests" folder from this link into the project: https://github.com/TAPP-Travel/Code-Challenge/tree/master/design
 - Run the following command to make sure everything works perfectly 
 `react-native run-ios`
