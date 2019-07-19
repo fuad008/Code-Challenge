@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import { SafeAreaView, StyleSheet, TouchableOpacity, Image, ImageBackground, View, Text, Platform, Button, StatusBar} from 'react-native';
 import GoogleStaticMap from 'react-native-google-static-map';
+import { withNavigation } from 'react-navigation';
 
 
 
 
+class PlaceScreen extends Component {
 
-export default class PlaceScreen extends Component {
+    static navigationOptions ={
+        title: 'Place',
+    }
+    
+
     render(){
-
         const {navigation} = this.props;
         const placeID = navigation.getParam('placeID');
         const placeName = navigation.getParam('placeName');
@@ -77,3 +82,5 @@ const styles = StyleSheet.create({
     },  
     
 });
+
+export default withNavigation(PlaceScreen);
