@@ -1,16 +1,26 @@
 import React, {Component} from 'react';
 import { SafeAreaView, StyleSheet, View, Text, Platform, Button, StatusBar, TouchableOpacity} from 'react-native';
-
 import RNGooglePlaces from 'react-native-google-places';
 import PlaceScreen from './PlaceScreen';
-
 import {G_API} from 'react-native-dotenv';
+import {NavigationEvents} from 'react-navigation';
 
 
-export default class SearchScreen extends Component {
 
 
-    openSearchModal() {
+class SearchScreen extends Component {
+
+    
+    constructor(props){
+        super(props);
+        this.openSearchModal = this.openSearchModal.bind(this);
+    }
+
+    static navigationOptions ={
+        title: 'Search',
+    }
+
+    openSearchModal = () => {
         
         
         RNGooglePlaces.openAutocompleteModal()
@@ -44,7 +54,9 @@ export default class SearchScreen extends Component {
                             }
                         });
                     })
+                    .catch(error => this.props.navigation.navigate("Home"));
              })
+             .catch(error => this.props.navigation.navigate("Home"));
             
         })
         .catch(error => {
@@ -55,11 +67,10 @@ export default class SearchScreen extends Component {
 
     render(){
       return (
-        <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
-          <View style={styles.container}>
-            {this.openSearchModal()}
-          </View>
-        </SafeAreaView>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+          <NavigationEvents onDidFocus={() => this.openSearchModal() } />
+
+        </View>
       );
     }
 };
@@ -70,4 +81,6 @@ const styles = StyleSheet.create({
       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
     }
 });
+
+export default SearchScreen;
 
