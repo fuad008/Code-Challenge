@@ -30,8 +30,8 @@ export default class PlaceScreen extends Component {
                             </View>
                         </ImageBackground>
                     </View>
-                    <View style={{ width: '100%', height: '100%', borderWidth: 1 }}>
-                        <View style={{flex: 1, alignItems: 'center', alignSelf: 'center', width: '100%', borderWidth: 1, borderColor: 'red' }}>
+                    <View style={{ width: '100%', height: '100%' }}>
+                        <View style={{flex: 1, alignItems: 'center', alignSelf: 'center', width: '100%', borderColor: 'red' }}>
                             <TouchableOpacity style={styles.button}>
                                 <Text style={{color: 'white', alignSelf: 'center', fontWeight: '500'}}>Pin to Trip</Text>
                             </TouchableOpacity>
