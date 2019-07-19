@@ -23,10 +23,10 @@ export default class HomeScreen extends Component {
                 </ImageBackground>
               </View>
               <View style={{height: '30%', marginTop: 20, alignContent:'center', alignItems: 'center', }}>
-                <Text style={{color: 'grey', fontSize: 20, marginTop: 30}}>This trip is empty</Text>
-                <Text style={{color: 'grey', fontSize: 15, marginTop: 5}}>Click the blue button</Text>
+                <Text style={{color: 'grey', fontSize: 20, marginTop: 30}}>This trip is empty!</Text>
+                <Text style={{color: 'grey', fontSize: 15, marginTop: 5}}>Click the blue button to add</Text>
               </View>
-              <View style={{flex:1}}>
+              <View style={{flex:1, height: '100%'}}>
                 <ImageBackground source={require("../assets/tripBackground.png")} style={{ width: '100%', height: '100%', opacity: 0.8, backgroundColor: 'rgba(0,0,0,0.5)' }}>
                   <View style={{ flex: 1, justifyContent: 'flex-end', marginBottom: 40, padding: 15 }}>
                     <Text style={{color: 'white', fontSize: 25, fontWeight: 'bold', }}>Exploring Louisville BBQ</Text>
@@ -44,12 +44,6 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-    },
-    white: {
-        color: 'white'
-    },
-    black: {
-        color: 'black',
     }
 });
 
