@@ -25,7 +25,7 @@ class SearchScreen extends Component {
         
         RNGooglePlaces.openAutocompleteModal()
         .then((place) => {
-            console.log(place);
+            
             let placeDetails = fetch(
                 `https://maps.googleapis.com/maps/api/place/details/json?placeid=${place.placeID}&key=${G_API}`
             ).then(response => response.json())
@@ -37,6 +37,7 @@ class SearchScreen extends Component {
                         this.props.navigation.navigate("Place",{
                             placeID: place.placeID,
                             placeName: place.name,
+                            placeCity: `${place.addressComponents[3].name}, ${place.addressComponents[5].name}`,
                             rating: Number(place.rating.toPrecision(2)),
                             address: place.address,
                             district: place.addressComponents[2].name,
@@ -69,7 +70,6 @@ class SearchScreen extends Component {
       return (
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
           <NavigationEvents onDidFocus={() => this.openSearchModal() } />
-
         </View>
       );
     }
