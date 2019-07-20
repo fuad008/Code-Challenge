@@ -27,8 +27,8 @@ export default class HomeScreen extends Component {
                 </ImageBackground>
               </View>
               <View style={{height: '30%', marginTop: 20, alignContent:'center', alignItems: 'center', }}>
-                <Text style={{color: 'grey', fontSize: 20, marginTop: 30}}>This trip is empty!</Text>
-                <Text style={{color: 'grey', fontSize: 15, marginTop: 5}}>Click the blue button to add</Text>
+                <Text style={{color: 'grey', fontSize: 16, marginTop: 30}}>This trip is empty!</Text>
+                <Text style={{color: 'grey', fontSize: 13, marginTop: 5}}>Click the blue plus to pin a place</Text>
               </View>
               <View style={{flex:1, height: '100%'}}>
                 <ImageBackground source={require("../assets/tripBackground.png")} style={{ width: '100%', height: '100%', opacity: 0.8, borderTopWidth: 0 , backgroundColor: 'rgba(0,0,0,0.5)' }}>
