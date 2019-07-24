@@ -2,7 +2,14 @@
 
 ## First Step
 
-- I am not using Expo Cli, So follow the "React Native CLI Quickstart" getting started guide using React Native (0.60) found at this link: https://facebook.github.io/react-native/docs/getting-started
+- Don't download the files yet from this repo. 
+- Run these commands below
+`
+npm install -g react-native-cli
+
+npm install react-navigation
+npm install react-native-gesture-handler
+`
 - I am using React Navigation 3.x for navigation, so follow the getting started guide found at this website: https://reactnavigation.org/docs/en/getting-started.html
 - For the Google Place Api, I am using the react-native-google-places. Note: this api requires an active billing account. For gettting started with this package follow this link: https://github.com/tolu360/react-native-google-places
 - I used react-native-dotenv for environment variables. Here is the link to setup: https://www.npmjs.com/package/react-native-dotenv
