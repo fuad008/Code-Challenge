@@ -10,7 +10,7 @@ react-native init App
 cd App
 react-native run-ios
 ```
-- Now install the react naviation 3.x
+- Now install the react navigation 3.x
 ```
 npm install react-navigation
 npm install react-native-gesture-handler
