@@ -3,20 +3,58 @@
 ## First Step
 
 - Don't download the files yet from this repo. 
-- Run these commands below
-`
+- Install the latest version of react-native (0.60):
+```
 npm install -g react-native-cli
-
+react-native init App
+cd App
+react-native run-ios
+```
+- Now install the react naviation 3.x
+```
 npm install react-navigation
 npm install react-native-gesture-handler
-`
-- I am using React Navigation 3.x for navigation, so follow the getting started guide found at this website: https://reactnavigation.org/docs/en/getting-started.html
-- For the Google Place Api, I am using the react-native-google-places. Note: this api requires an active billing account. For gettting started with this package follow this link: https://github.com/tolu360/react-native-google-places
+```
+- If you don't have Cocoapads installed, then run:
+```
+gem install cocoapods
+```
+- On iOS, to complete the linking, make sure you have Cocoapods installed. Then run:
+```
+cd ios
+pod install
+cd ..
+```
+- 
+- To install the Google Place Api. Run command:
+```
+npm i react-native-google-places --save
+react-native link react-native-google-places
+```
+- The run these commands one more time:
+```
+cd ios
+pod install
+cd ..
+```
+- Configuration on iOS
+In your 'AppDelegate.m' file in iOS fold, import the Google Places library by adding
+    @import GooglePlaces; 
+    @import GoogleMaps;
+on top of the file.
+
+Within the didFinishLaunchingWithOptions method, instantiate the library as follows - read about a better way to secure this below:
+[GMSPlacesClient provideAPIKey:@"Google_API_KEY_HERE"];
+[GMSServices provideAPIKey:@"Google_API_KEY_HERE"];
+Ensure you have the required location permissions for the application by declaring keys for NSLocationWhenInUseUsageDescription and NSLocationAlwaysAndWhenInUseUsageDescription in your info.plist file, either using Xcode or manually editing the file e.g.
+<key>NSLocationWhenInUseUsageDescription</key>
+	<string>RNGPDemos needs your location to show you places</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>RNGPDemos needs your location to show you places</string>
+ 
 - I used react-native-dotenv for environment variables. Here is the link to setup: https://www.npmjs.com/package/react-native-dotenv
 - Copy the "assests" folder from this link into the project: https://github.com/TAPP-Travel/Code-Challenge/tree/master/design
-- Run the following command to make sure everything works perfectly 
-`react-native run-ios`
-- Once you see Welcome screen, let's move on to the Second Step below.
+
 
 ## Second Step - Update Dependencies
  If you have followed the first steps above, then you might see a few deprecated warnings in the console about several packages, so let's update them using these commands.
