@@ -57,17 +57,24 @@ Ensure you have the required location permissions for the application by declari
 <string>RNGPDemos needs your location to show you places</string>
  ```
 - I used react-native-dotenv for environment variables. Here is the link to setup: https://www.npmjs.com/package/react-native-dotenv
-- Copy the "assests" folder from this link into the project: https://github.com/TAPP-Travel/Code-Challenge/tree/master/design
 
+## Second Step - Download the files from this repo
 
-## Second Step - Update Dependencies
+- Copy the "assests" folder from this repo into the project: https://github.com/TAPP-Travel/Code-Challenge/tree/master/design
+- Download and copy the 'components' folder into the main Project found on this link: https://github.com/fuad008/Code-Challenge under 'App' folder.
+- Download and replace the 'App.js' file in your project.
+
+## Third Step - Update Dependencies
  If you have followed the first steps above, then you might see a few deprecated warnings in the console about several packages, so let's update them using these commands.
 - npm install --save core-js@^3
 - npm install --save eslint@^5
 
-## Third Step - Add Components
-- Download and copy the 'components' folder into the main Project found on this link: https://github.com/fuad008/Code-Challenge under 'App' folder.
-- Download and replace the 'App.js' file in your project.
+## Last Step - Run
+```
+react-native run-ios
+```
+
+If you have any problems installing this app, please feel free email me. Thank you in advance!
 
 ## Note
 - Since there is 100MB file size limit on GitHub, I only uploaded the necessary files such as 'components' folder and 'App.js' file. Rest of the files are same for everybody if you follow the above steps. 
