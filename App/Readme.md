@@ -25,7 +25,7 @@ cd ios
 pod install
 cd ..
 ```
-- 
+
 - To install the Google Place Api. Run command:
 ```
 npm i react-native-google-places --save
@@ -39,19 +39,23 @@ cd ..
 ```
 - Configuration on iOS
 In your 'AppDelegate.m' file in iOS fold, import the Google Places library by adding
+
     @import GooglePlaces; 
     @import GoogleMaps;
 on top of the file.
 
-Within the didFinishLaunchingWithOptions method, instantiate the library as follows - read about a better way to secure this below:
+Within the 'didFinishLaunchingWithOptions' method, instantiate the library as follows - read about a better way to secure this below:
+```
 [GMSPlacesClient provideAPIKey:@"Google_API_KEY_HERE"];
 [GMSServices provideAPIKey:@"Google_API_KEY_HERE"];
+```
 Ensure you have the required location permissions for the application by declaring keys for NSLocationWhenInUseUsageDescription and NSLocationAlwaysAndWhenInUseUsageDescription in your info.plist file, either using Xcode or manually editing the file e.g.
+```
 <key>NSLocationWhenInUseUsageDescription</key>
-	<string>RNGPDemos needs your location to show you places</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>RNGPDemos needs your location to show you places</string>
- 
+<string>RNGPDemos needs your location to show you places</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>RNGPDemos needs your location to show you places</string>
+ ```
 - I used react-native-dotenv for environment variables. Here is the link to setup: https://www.npmjs.com/package/react-native-dotenv
 - Copy the "assests" folder from this link into the project: https://github.com/TAPP-Travel/Code-Challenge/tree/master/design
 
