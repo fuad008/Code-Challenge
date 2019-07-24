@@ -37,11 +37,11 @@ cd ios
 pod install
 cd ..
 ```
-- Configuration on iOS
-In your 'AppDelegate.m' file in iOS fold, import the Google Places library by adding
-
+- In your iOS folder 'AppDelegate.m' file, import the Google Places library by adding
+```
     @import GooglePlaces; 
     @import GoogleMaps;
+```
 on top of the file.
 
 Within the 'didFinishLaunchingWithOptions' method, instantiate the library as follows - read about a better way to secure this below:
@@ -49,7 +49,7 @@ Within the 'didFinishLaunchingWithOptions' method, instantiate the library as fo
 [GMSPlacesClient provideAPIKey:@"Google_API_KEY_HERE"];
 [GMSServices provideAPIKey:@"Google_API_KEY_HERE"];
 ```
-Ensure you have the required location permissions for the application by declaring keys for NSLocationWhenInUseUsageDescription and NSLocationAlwaysAndWhenInUseUsageDescription in your info.plist file, either using Xcode or manually editing the file e.g.
+Ensure you have the required location permissions for the application by declaring keys for NSLocationWhenInUseUsageDescription and NSLocationAlwaysAndWhenInUseUsageDescription in your 'info.plist' file, either using Xcode or manually editing the file e.g.
 ```
 <key>NSLocationWhenInUseUsageDescription</key>
 <string>RNGPDemos needs your location to show you places</string>
